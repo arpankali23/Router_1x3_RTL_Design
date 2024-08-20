@@ -8,7 +8,7 @@ Router 1x3 design follows packet based protocol and it receives the network pack
 3. Register
 4. FIFOs
 
-# Functionality of each sub-block
+# Functionality of each sub-blocks
 1. Registers : 
 This blocks acts like a loadabe register which uses the control signal comming from FSM controller and load the packets in the order as header,payload followed by parity using dout[7:0].
 2. FSM Controller : 
