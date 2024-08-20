@@ -9,11 +9,11 @@ Router top block level architecture consist 4 sub-blocks
 4. FIFOs
 
 Functionality of each sub-block
-1. Registers
+1. Registers : 
 This blocks acts like a loadabe register which uses the control signal comming from FSM controller and load the packets in the order as header,payload followed by parity using dout[7:0].
-2. FSM Controller
+2. FSM Controller : 
 This is the main hub of router architecture. FSM acts like a controller that generates multiple control signal which is used to control reset of the sub-blocks.
-3. Synchronizer
+3. Synchronizer : 
 This blocks capture the address of the packet and based on that generate write_enb[2:0] signal which is further used for connecting the write_enb[0],write_enb[1],write_enb[2] pins of the each FIFOs. Apart from that this block also generates the timer logic of the router.
-4. FIFO
+4. FIFO : 
 Since there are 3 destination LAN, we have 3 FIFOs. The primary job of the FIFO is to store a packet based on relevant address driven by the source LAN. This  FIFO operates both resd and write operations simultaneously.
